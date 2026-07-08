@@ -10,13 +10,13 @@ The model structures the scheduling problem by defining system entities, paramet
 *   **Tasks ($T$):** Units of work to be scheduled.
 *   **Developers ($D$):** Resources for task assignment.
 *   **Modules ($M$):** Associated with tasks and managed by teams.
-*   **Teams ($\mathcal{T}$):** Groups managing modules [cite: 2].
+*   **Teams ($\mathcal{T}$):** Groups managing modules.
 *   **Dependencies ($P$):** Defined as acyclic ($P_{acyc}$) and cyclic ($P_{cyc}$) relationships.
 
 ### Parameters
 *   **Fibonacci-based story points:** Relative effort scale.
 *   **Developer profiles:** Skills, experience levels ($A, I, B$), and availability.
-*   **Time adjustment factor ($ eta$):** Adjusts duration based on developer experience.
+*   **Time adjustment factor $(\beta)$:** Adjusts duration based on developer experience.
 
 ### Decision Variables
 *   **Task assignments ($x_{ij}$):** Binary predicate for assignment.
@@ -24,7 +24,7 @@ The model structures the scheduling problem by defining system entities, paramet
 
 ### Optimization Objectives
 *   **Minimize Coordination Risk:** Reduces risks based on sequential vs. parallel scheduling of dependent tasks.
-*   **Minimize Makespan:** Minimizes the total project duration ($max(f_i)$).
+*   **Minimize Makespan:** Minimizes the total project duration $\max(f_i)$.
 *   **Minimize Workload Imbalance:** Minimizes the standard deviation of developer workloads.
 
 ### Constraints
